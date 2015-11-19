@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Max</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container">
+  <div class="jumbotron">
+
+    <h1>John Lennon</h1>
+    <p>Присягаю на вірність народу України.</p>
+
+  </div>
+
+  <%= nav_bar responsive: true do %>
+    <%= menu_group do %>
+        <%= menu_item "Головна", root_path %>
+        <%= menu_item "Про мене" %>
+
+          <%= menu_item "Зворотній зв'язок"%>
+          <%= menu_item "Партія 'Самопоміч'" %>
+          <%= menu_item "Facebook" %>
+          <%= menu_item "VKontakte" %>
+          <%= menu_item "Twitter" %>
+
+      <% end %>
+  <% end %>
+</div>
+  <div class="container">
+    <%= yield %>
+  </div>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <p class="text-muted"> SiniiNet production. (c) 2015</p>
+  </div>
+</footer>
+
+</body>
+</html>
