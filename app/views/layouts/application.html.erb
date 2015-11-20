@@ -19,9 +19,9 @@
   <%= nav_bar responsive: true do %>
     <%= menu_group do %>
         <%= menu_item "Головна", root_path %>
-        <%= menu_item "Про мене" %>
+        <%= menu_item "Про мене", about_path%>
 
-          <%= menu_item "Зворотній зв'язок"%>
+          <%= menu_item "Зворотній зв'язок", '/feedback'%>
           <%= menu_item "Партія 'Самопоміч'", 'http://samopomich.zt.ua/' %>
           <%= menu_item "Facebook" %>
           <%= menu_item "Twitter" %>

@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get 'welcome/index'
-
+  get '/about' => 'welcome#about', as: :about
+  get '/feedback' => 'welcome#new_feedback', as: :new_feedback
+  post '/feedback' => 'welcome#create_feedback', as: :create_feedback
   resources :news
   resources :blogs
 
