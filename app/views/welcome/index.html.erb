@@ -13,8 +13,9 @@
             <p>
               <%= image_tag news.picture_url, width: 135, height: 100, class: 'leftimg' %>
               <%= link_to news.title, news %>
-              <%= news.created_at %> <br>
+              <span class="text-muted" ><%= news.created_at %> </span> <br>
               <%= news.html.html_safe.truncate(200) %>
+
             </p>
 
           </div>
@@ -30,6 +31,7 @@
         <h4> <%= link_to @last_blog.title, @last_blog %></h4>
         <p>
           <%= @last_blog.html.html_safe.truncate(550) %>
+
           <div class="pull-right">
             <%= link_to "Читати далі", @last_blog %>
           </div>
@@ -50,5 +52,19 @@
 
     </div>
   </div>
+<script>
+$(document).ready(function() {
 
+    $("#owl-demo").owlCarousel({
+
+        autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+        items : 4,
+        itemsDesktop : [1199,3],
+        itemsDesktopSmall : [979,3]
+
+    });
+
+});
+</script>
 </div>

@@ -1,0 +1,7 @@
+<div class="span10">
+  <h1> <%= @news.title %> </h1>
+  <%= image_tag @news.picture_url, class: 'leftimg newsimg' %>
+
+  <p> <%= @news.html.html_safe %></p>
+    <p class="text-muted"> <%= @news.created_at %></p>
+</div>

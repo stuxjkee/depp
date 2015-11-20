@@ -1,5 +1,21 @@
 Rails.application.routes.draw do
 
+  get 'news/index'
+
+  get 'news/show'
+
+  get 'news/edit'
+
+  get 'news/destroy'
+
+  get 'news_controller/index'
+
+  get 'news_controller/show'
+
+  get 'news_controller/edit'
+
+  get 'news_controller/destroy'
+
   root 'welcome#index'
 
   get 'welcome/index'

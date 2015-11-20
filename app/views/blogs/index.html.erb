@@ -1,2 +1,12 @@
-<h1>Blogs#index</h1>
-<p>Find me in app/views/blogs/index.html.erb</p>
+<h1> Блог </h1>
+<% @blogs.each do |blog| %>
+
+  <div class="col-lg-5">
+    <h2> <%= blog.title %></h2>
+
+    <p> <%= blog.html.html_safe.truncate(200) %> </p>
+      <span class="text-muted"> <%= blog.created_at %></span>
+    <%= link_to 'Більше...', blog, class: 'pull-right' %>
+  </div>
+
+<% end %>

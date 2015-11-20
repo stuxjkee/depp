@@ -1,8 +1,9 @@
 class WelcomeController < ApplicationController
   def index
     @last_blog = Blog.last
-    @news = News.all.limit(2)
+    @news = News.order(created_at: :desc).limit(2)
   end
+
   def about
 
   end
