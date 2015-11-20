@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/about' => 'welcome#about', as: :about
   get '/feedback' => 'welcome#new_feedback', as: :new_feedback
   post '/feedback' => 'welcome#create_feedback', as: :create_feedback
+  
   resources :news
   resources :blogs
 
