@@ -14,4 +14,8 @@
         </p>
       </br>
       </div>
+
+  <% end %>
+  <% if can? :create, News %>
+    <p><%= link_to "Нова новина", new_news_path %></p>
   <% end %>

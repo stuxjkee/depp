@@ -10,3 +10,6 @@
   </div>
 
 <% end %>
+<% if can? :create, Blog %>
+  <p><%= link_to "Новий блог", new_blog_path %></p>
+<% end %>

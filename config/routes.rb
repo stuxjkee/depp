@@ -1,20 +1,7 @@
 Rails.application.routes.draw do
 
-  get 'news/index'
-
-  get 'news/show'
-
-  get 'news/edit'
-
-  get 'news/destroy'
-
-  get 'news_controller/index'
-
-  get 'news_controller/show'
-
-  get 'news_controller/edit'
-
-  get 'news_controller/destroy'
+  devise_for :users
+  
 
   root 'welcome#index'
 
@@ -22,7 +9,7 @@ Rails.application.routes.draw do
   get '/about' => 'welcome#about', as: :about
   get '/feedback' => 'welcome#new_feedback', as: :new_feedback
   post '/feedback' => 'welcome#create_feedback', as: :create_feedback
-  
+
   resources :news
   resources :blogs
 
