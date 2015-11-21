@@ -34,12 +34,12 @@
 
       <% if user_signed_in? %>
         <%= drop_down current_user.email do %>
-          <%= menu_item 'Edit account', edit_user_registration_path %>
-          <%= menu_item 'Sign out', destroy_user_session_path, :method=>'delete' %>
+          <%= menu_item 'Налаштування', edit_user_registration_path %>
+          <%= menu_item 'Вийти', destroy_user_session_path, :method=>'delete' %>
         <% end %>
       <% else %>
-        <%= menu_item 'Sign in', new_user_session_path %>
-        <%= menu_item 'Sign up', new_user_registration_path %>
+        <%= menu_item 'Увійти', new_user_session_path %>
+        <%= menu_item 'Реєстрація', new_user_registration_path %>
       <% end %>
 
 

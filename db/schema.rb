@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151120214930) do
+ActiveRecord::Schema.define(version: 20151121111908) do
 
   create_table "blogs", force: true do |t|
     t.string   "title"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20151120214930) do
   create_table "news", force: true do |t|
     t.string   "picture_url"
     t.string   "title"
-    t.string   "html"
+    t.text     "html",        limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end

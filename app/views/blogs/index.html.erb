@@ -4,12 +4,12 @@
   <div class="col-lg-5">
     <h2> <%= blog.title %></h2>
 
-    <p> <%= blog.html.html_safe.truncate(200) %> </p>
+    <p> <%= strip_tags blog.html.html_safe.truncate(200) %> </p>
       <span class="text-muted"> <%= blog.created_at %></span>
     <%= link_to 'Більше...', blog, class: 'pull-right' %>
   </div>
 
 <% end %>
 <% if can? :create, Blog %>
-  <p><%= link_to "Новий блог", new_blog_path %></p>
+  <p><%= link_to "Новий блог", new_blog_path, class: 'btn btn-primary' %></p>
 <% end %>
